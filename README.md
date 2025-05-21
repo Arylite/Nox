@@ -1,30 +1,33 @@
-Bien sûr, voilà un README bien direct, clair, et à la cool en français pour ton projet Nox :
-
----
-
 # Nox
 
-Nox est un projet simple en Rust qui sert à expérimenter la création d’un langage de programmation, un peu dans l’esprit de Python.
-C’est surtout un projet de test, donc faut pas t’attendre à un truc fini ou super optimisé. Si personne ne s’y intéresse, je vais pas trop m’y attarder.
+**Nox** est un projet expérimental de langage de programmation, développé en Rust. Inspiré par la syntaxe de Python, il a pour objectif d'explorer la construction d'un langage interprété en commençant par un lexer et un AST (Abstract Syntax Tree) bien structurés.
+
+Ce projet est principalement destiné à des fins d’apprentissage, de prototypage et d’expérimentation. Il n’est pas encore prévu pour un usage en production. Son développement dépendra de l’intérêt qu’il suscite.
 
 ## Fonctionnalités
 
-* **Lexer** :
-  Fait avec la crate [`logos`](https://crates.io/crates/logos) pour tokeniser efficacement le code.
-  Supporte :
+### 🔤 Lexer
 
-  * Les nombres, chaînes, caractères, et templates
-  * Les opérateurs, mots-clés et identifiants
-  * Le suivi précis de la position dans le code (utile pour les erreurs)
+Construit à l’aide de la crate [`logos`](https://crates.io/crates/logos), le lexer transforme efficacement le code source en une séquence de tokens, avec :
 
-* **AST (Arbre Syntaxique Abstrait)** :
+* Le support des littéraux numériques, chaînes de caractères, caractères et templates
+* La reconnaissance des opérateurs, mots-clés et identifiants
+* Un suivi précis de la localisation des tokens pour faciliter le débogage et les messages d’erreur
 
-  * Types variés pour gérer expressions, instructions, modules, et programmes
-  * Support du pattern visiteur pour parcourir et analyser l’arbre
-  * Traque la position dans le code pour améliorer les messages d’erreur
+### 🌲 AST (Abstract Syntax Tree)
 
----
+* Une structure riche permettant de représenter les expressions, instructions, modules et programmes
+* Un support du *visitor pattern* pour l’analyse ou la transformation de l’AST
+* Une traçabilité complète de la position dans le code source pour des erreurs plus claires
 
-En gros, c’est un terrain de jeu pour expérimenter l’implémentation d’un langage. Pas de promesses sur la stabilité ou les fonctionnalités avancées pour l’instant.
+## Objectifs
 
----
+Nox a pour but de servir de terrain d’expérimentation pour :
+
+* La conception de langages interprétés
+* La gestion fine des erreurs liées à la syntaxe
+* L’architecture modulaire d’un front-end de compilateur
+
+## Remarques
+
+Ce projet n’est pas encore mature et ne suit pas de feuille de route stricte. Il est possible que certaines parties soient incomplètes ou sujettes à refactorisation fréquente. Si le projet vous intéresse, n’hésitez pas à contribuer ou à proposer des idées.
